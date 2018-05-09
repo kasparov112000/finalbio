@@ -5,7 +5,8 @@ import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 
 import {
   ApiService,
-  ArticlesService,
+  BlogsService,
+  EventsService,
   AuthGuard,
   CommentsService,
   JwtService,
@@ -13,6 +14,7 @@ import {
   TagsService,
   UserService
 } from './services';
+import { DonationsService } from './services/donations.service';
 
 @NgModule({
   imports: [
@@ -21,7 +23,9 @@ import {
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
     ApiService,
-    ArticlesService,
+    BlogsService,
+    DonationsService,
+    EventsService,
     AuthGuard,
     CommentsService,
     JwtService,

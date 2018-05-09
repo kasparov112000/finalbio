@@ -15,8 +15,20 @@ const routes: Routes = [
     loadChildren: './editor/editor.module#EditorModule'
   },
   {
-    path: 'article',
-    loadChildren: './article/article.module#ArticleModule'
+    path: 'matrix',
+    loadChildren: './matrix/matrix.module#MatrixModule'
+  },
+  {
+    path: 'blog',
+    loadChildren: './blog/blog.module#BlogModule'
+  },
+  {
+    path: 'items',
+    loadChildren: './donation/donation.module#DonationModule'
+  },
+  {
+    path: 'event',
+    loadChildren: './event/event.module#EventModule'
   }
 ];
 

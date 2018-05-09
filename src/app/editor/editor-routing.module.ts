@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EditorComponent } from './editor.component';
-import { EditableArticleResolver } from './editable-article-resolver.service';
+import { EditableBlogResolver } from './editable-blog-resolver.service';
 import { AuthGuard } from '../core';
 import { SharedModule } from '../shared';
 
@@ -16,7 +16,7 @@ const routes: Routes = [
     component: EditorComponent,
     canActivate: [AuthGuard],
     resolve: {
-      article: EditableArticleResolver
+      blog: EditableBlogResolver
     }
   }
 ];

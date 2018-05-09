@@ -3,11 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
-import { ArticleListComponent, ArticleMetaComponent, ArticlePreviewComponent } from './article-helpers';
+import { BlogListComponent, BlogMetaComponent, BlogPreviewComponent } from './blog-helpers';
 import { FavoriteButtonComponent, FollowButtonComponent } from './buttons';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
+import { EventListComponent, EventPreviewComponent, EventMetaComponent } from './event-helpers';
+import { Favorite1ButtonComponent } from './buttons/favorite1-button.component';
+import { MarkdownPipe } from './blog-helpers/markdown.pipe';
+import { DonationListComponent, DonationPreviewComponent, DonationMetaComponent } from '.';
 
 @NgModule({
   imports: [
@@ -18,20 +21,37 @@ import { ShowAuthedDirective } from './show-authed.directive';
     RouterModule
   ],
   declarations: [
-    ArticleListComponent,
-    ArticleMetaComponent,
-    ArticlePreviewComponent,
+
+    DonationListComponent,
+    DonationMetaComponent,
+    DonationPreviewComponent,
+    BlogListComponent,
+    BlogMetaComponent,
+    BlogPreviewComponent,
+    EventListComponent,
+    EventMetaComponent,
+    EventPreviewComponent,
     FavoriteButtonComponent,
+    Favorite1ButtonComponent,
     FollowButtonComponent,
     ListErrorsComponent,
-    ShowAuthedDirective
+
+    ShowAuthedDirective,
+    MarkdownPipe
   ],
   exports: [
-    ArticleListComponent,
-    ArticleMetaComponent,
-    ArticlePreviewComponent,
+    BlogListComponent,
+    BlogMetaComponent,
+    BlogPreviewComponent,
+    EventListComponent,
+    EventMetaComponent,
+    EventPreviewComponent,
+    DonationListComponent,
+    DonationMetaComponent,
+    DonationPreviewComponent,
     CommonModule,
     FavoriteButtonComponent,
+    Favorite1ButtonComponent,
     FollowButtonComponent,
     FormsModule,
     ReactiveFormsModule,
@@ -41,4 +61,4 @@ import { ShowAuthedDirective } from './show-authed.directive';
     ShowAuthedDirective
   ]
 })
-export class SharedModule {}
+export class SharedModule { }

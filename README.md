@@ -22,7 +22,7 @@ We're currently working on some docs for the codebase (explaining where function
 
 ### Making requests to the backend API
 
-For convenience, we have a live API server running at https://conduit.productionready.io/api for the application to make requests against. You can view [the API spec here](https://github.com/GoThinkster/productionready/blob/master/api) which contains all routes & responses for the server.
+For convenience, we have a live API server running at https://Biolinkdepot.org.productionready.io/api for the application to make requests against. You can view [the API spec here](https://github.com/GoThinkster/productionready/blob/master/api) which contains all routes & responses for the server.
 
 The source code for the backend server (available for Node, Rails and Django) can be found in the [main RealWorld repo](https://github.com/gothinkster/realworld).
 
@@ -41,37 +41,37 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Functionality overview
 
-The example application is a social blogging site (i.e. a Medium.com clone) called "Conduit". It uses a custom API for all requests, including authentication. You can view a live demo over at https://angular.realworld.io
+The example application is a social blogging site (i.e. a Medium.com clone) called "Biolinkdepot.org". It uses a custom API for all requests, including authentication. You can view a live demo over at https://angular.realworld.io
 
 **General functionality:**
 
 - Authenticate users via JWT (login/signup pages + logout button on settings page)
 - CRU* users (sign up & settings page - no deleting required)
-- CRUD Articles
-- CR*D Comments on articles (no updating required)
-- GET and display paginated lists of articles
-- Favorite articles
+- CRUD Blogs
+- CR*D Comments on blogs (no updating required)
+- GET and display paginated lists of blogs
+- Favorite blogs
 - Follow other users
 
 **The general page breakdown looks like this:**
 
 - Home page (URL: /#/ )
     - List of tags
-    - List of articles pulled from either Feed, Global, or by Tag
-    - Pagination for list of articles
+    - List of blogs pulled from either Feed, Global, or by Tag
+    - Pagination for list of blogs
 - Sign in/Sign up pages (URL: /#/login, /#/register )
     - Uses JWT (store the token in localStorage)
     - Authentication can be easily switched to session/cookie based
 - Settings page (URL: /#/settings )
-- Editor page to create/edit articles (URL: /#/editor, /#/editor/article-slug-here )
-- Article page (URL: /#/article/article-slug-here )
-    - Delete article button (only shown to article's author)
+- Editor page to create/edit blogs (URL: /#/editor, /#/editor/blog-slug-here )
+- Blog page (URL: /#/blog/blog-slug-here )
+    - Delete blog button (only shown to blog's author)
     - Render markdown from server client side
     - Comments section at bottom of page
     - Delete comment button (only shown to comment's author)
 - Profile page (URL: /#/profile/:username, /#/profile/:username/favorites )
     - Show basic user info
-    - List of articles populated from author's created articles or author's favorited articles
+    - List of blogs populated from author's created blogs or author's favorited blogs
 
 
 <br />

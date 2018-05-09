@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light">
   <div class="container">
-    <a class="navbar-brand" routerLink="/">conduit</a>
+    <a class="navbar-brand" routerLink="/"></a>
 
     <!-- Show this for logged out users -->
     <ul *appShowAuthed="false"
@@ -12,7 +12,18 @@
           Home
         </a>
       </li>
-
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/items">
+          Our Inventory
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/events">
+          Events
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link"
           routerLink="/login"
@@ -43,12 +54,33 @@
           Home
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/events"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">
+          Events
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/items"
+          routerLinkActive="active">
+          <i class="ion-compose"></i>&nbsp;Donate Item
+        </a>
 
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/matrix"
+          routerLinkActive="active">
+          <i class="ion-compose"></i>&nbsp;New Event
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link"
           routerLink="/editor"
           routerLinkActive="active">
-          <i class="ion-compose"></i>&nbsp;New Article
+          <i class="ion-compose"></i>&nbsp;New Blog
         </a>
       </li>
 

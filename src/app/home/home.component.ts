@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ArticleListConfig, TagsService, UserService } from '../core';
+import { BlogListConfig, TagsService, UserService } from '../core';
 
 @Component({
   selector: 'app-home-page',
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ) {}
 
   isAuthenticated: boolean;
-  listConfig: ArticleListConfig = {
+  listConfig: BlogListConfig = {
     type: 'all',
     filters: {}
   };
@@ -28,9 +28,9 @@ export class HomeComponent implements OnInit {
       (authenticated) => {
         this.isAuthenticated = authenticated;
 
-        // set the article list accordingly
+        // set the blog list accordingly
         if (authenticated) {
-          this.setListTo('feed');
+          this.setListTo('all');
         } else {
           this.setListTo('all');
         }

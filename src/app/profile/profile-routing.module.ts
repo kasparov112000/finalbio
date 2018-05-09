@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfileArticlesComponent } from './profile-articles.component';
+import { ProfileBlogsComponent } from './profile-blogs.component';
 import { ProfileFavoritesComponent } from './profile-favorites.component';
 import { ProfileResolver } from './profile-resolver.service';
 import { ProfileComponent } from './profile.component';
@@ -16,7 +16,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: ProfileArticlesComponent
+        component: ProfileBlogsComponent
       },
       {
         path: 'favorites',
