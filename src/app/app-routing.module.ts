@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: './matrix/matrix.module#MatrixModule'
   },
   {
+    path: 'donate',
+    loadChildren: './donate/donate.module#DonateModule'
+  },
+  {
     path: 'blog',
     loadChildren: './blog/blog.module#BlogModule'
   },
