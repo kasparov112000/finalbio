@@ -1,6 +1,6 @@
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-heavy">
   <div class="container">
-    <a class="navbar-brand" routerLink="/"></a>
+    <a class="navbar-banner" routerLink="/"></a>
 
     <!-- Show this for logged out users -->
     <ul *appShowAuthed="false"
@@ -13,8 +13,15 @@
         </a>
       </li>
       <li class="nav-item">
+          <a class="nav-link"
+            routerLink="/donate"
+            routerLinkActive="active">
+            <i class="ion-compose"></i>&nbsp; Donate
+          </a>
+        </li>
+      <li class="nav-item">
         <a class="nav-link"
-          routerLink="/donatioins">
+          routerLink="/donations">
           Our Inventory
         </a>
       </li>
@@ -72,7 +79,7 @@
             <a class="nav-link"
               routerLink="/donate"
               routerLinkActive="active">
-              <i class="ion-compose"></i>&nbsp;New Donation
+              <i class="ion-compose"></i>&nbsp; Donate
             </a>
           </li>
 

@@ -48,7 +48,6 @@ export class EventComponent implements OnInit {
     this.userService.currentUser.subscribe(
       (userData: User) => {
         this.currentUser = userData;
-
         this.canModify = (this.currentUser.username === this.event.author.username);
       }
     );
@@ -68,6 +67,11 @@ export class EventComponent implements OnInit {
     this.event.author.following = following;
   }
 
+  onToggleAttending(attending: boolean) {
+
+    this.event.attending = attending;
+  }
+
   deleteEvent() {
     this.isDeleting = true;
 
@@ -80,8 +84,8 @@ export class EventComponent implements OnInit {
   }
 
   populateComments() {
-    this.commentsService.getAll(this.event.slug)
-      .subscribe(comments => this.comments = comments);
+  //  this.commentsService.getAll(this.event.slug)
+   //   .subscribe(comments => this.comments = comments);
   }
 
   addComment() {

@@ -10,6 +10,7 @@ export interface Event {
   createdAt: string;
   updatedAt: string;
   favorited: boolean;
+  attending: boolean;
   favoritesCount: number;
   author: Profile;
 }

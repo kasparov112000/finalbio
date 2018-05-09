@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BlogListComponent, BlogMetaComponent, BlogPreviewComponent } from './blog-helpers';
-import { FavoriteButtonComponent, FollowButtonComponent } from './buttons';
+import { FavoriteButtonComponent, FollowButtonComponent, AttendButtonComponent } from './buttons';
 import { ListErrorsComponent } from './list-errors.component';
 import { ShowAuthedDirective } from './show-authed.directive';
 import { EventListComponent, EventPreviewComponent, EventMetaComponent } from './event-helpers';
@@ -34,6 +34,7 @@ import { DonationListComponent, DonationPreviewComponent, DonationMetaComponent 
     FavoriteButtonComponent,
     Favorite1ButtonComponent,
     FollowButtonComponent,
+    AttendButtonComponent,
     ListErrorsComponent,
 
     ShowAuthedDirective,
@@ -53,6 +54,7 @@ import { DonationListComponent, DonationPreviewComponent, DonationMetaComponent 
     FavoriteButtonComponent,
     Favorite1ButtonComponent,
     FollowButtonComponent,
+    AttendButtonComponent,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

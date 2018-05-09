@@ -30,6 +30,13 @@
             (toggle)="onToggleFavorite($event)">
             {{ event.favorited ? 'Unfavorite' : 'Favorite' }} Event <span class="counter">({{ event.favoritesCount }})</span>
           </app-favorite1-button>
+
+          <app-attend-button
+            [event]="event"
+            (toggle)="onToggleAttending($event)">
+          </app-attend-button>
+
+
         </span>
 
       </app-event-meta>

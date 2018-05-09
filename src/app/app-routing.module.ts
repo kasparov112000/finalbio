@@ -27,7 +27,7 @@ const routes: Routes = [
     loadChildren: './blog/blog.module#BlogModule'
   },
   {
-    path: 'items',
+    path: 'donation',
     loadChildren: './donation/donation.module#DonationModule'
   },
   {

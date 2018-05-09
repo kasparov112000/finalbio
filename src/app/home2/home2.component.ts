@@ -30,7 +30,7 @@ export class Home2Component implements OnInit {
 
         // set the event list accordingly
         if (authenticated) {
-          this.setListTo('feed');
+          this.setListTo('all');
         } else {
           this.setListTo('all');
         }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Donation, DonationsService } from '../core';
+import { Donation, DonationsService, UserService } from '../core';
 
 
 @Component({
@@ -16,12 +16,14 @@ export class DonateComponent implements OnInit {
   tagField = new FormControl();
   errors: Object = {};
   isSubmitting = false;
+  isAuthenticated: boolean;
 
   constructor(
     private donationsService: DonationsService,
     private route: ActivatedRoute,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private userService: UserService
   ) {
     // use the FormBuilder to create a form group
     this.donationForm = this.fb.group({
@@ -40,6 +42,15 @@ export class DonateComponent implements OnInit {
 
   ngOnInit() {
     // If there's an donation prefetched, load it
+    this.userService.isAuthenticated.subscribe(
+      (authenticated) => {
+        this.isAuthenticated = authenticated;
+      }
+    );
+    if (!this.isAuthenticated) {
+      this.router.navigateByUrl('/login');
+      return;
+    }
     this.route.data.subscribe((data: { donation: Donation }) => {
       if (data.donation) {
         this.donation = data.donation;

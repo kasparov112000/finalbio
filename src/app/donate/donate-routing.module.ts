@@ -11,8 +11,11 @@ const routes: Routes = [
   {
     path: '',
     component: DonateComponent,
-    canActivate: [AuthGuard]
-  },
+    canActivate: [AuthGuard],
+    resolve: {
+      donation: EditableDonateResolver
+    }
+   },
   {
     path: ':slug',
     component: DonateComponent,

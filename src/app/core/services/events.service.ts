@@ -58,5 +58,13 @@ export class EventsService {
     return this.apiService.delete('/events/' + slug + '/favorite');
   }
 
+  attend(slug): Observable<Event> {
+    return this.apiService.post('/events/' + slug + '/attend');
+  }
+
+  unattend(slug): Observable<Event> {
+    return this.apiService.delete('/events/' + slug + '/unattend');
+  }
+
 
 }
